@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microdesafio 1 - Aula01</title>
+</head>
+
+<body>
+    <script>
+        function media(notas) {
+            this.notas = notas;
+
+            this.calcularMedia = function () {
+                let somaNotas = this.notas.reduce((acumulador, nota) => {
+                    return acumulador + nota;
+                })
+                return somaNotas / 4;
+            }
+
+            this.aprovado = function () {
+                if (this.calcularMedia >= 7) {
+                    return "Parabéns, você foi aprovado!"
+                }
+                else {
+                    return "Que pena, você foi reprovado!"
+                }
+            }
+
+        }
+
+        let media1 = new media([5, 9, 6, 7]);
+
+        console.log("Sua nota no 1º Bimestre foi 5");
+        console.log("Sua nota no 2º Bimestre foi 9");
+        console.log("Sua nota no 3º Bimestre foi 6");
+        console.log("Sua nota no 4º Bimestre foi 7");
+        console.log("Sua média foi:", media1.calcularMedia());
+        console.log(media1.aprovado())
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+  
+html{
+    --white: #FFFFFF;
+    --grey: #fcfcfce3;
+    --brown: #6C4C40;
+    --blue: #19B6FE;
+    --light-blue: #9AF1FF;
+    --black: #373434;
+  
+    /* Cores da polaroid */
+    --pink: #E272A1;
+    --orange: #FF7143;
+    --mustard: #FDCA28;
+    --yellow: #FFEC3C;
+    --green: #89C447;
+  
+  /* 1rem = 16px (User Agent) = 100% (User Agent) */
+    font-size: 62.5% /* 10px */;
+    font-family: 'Inconsolata', monospace;
+    color: var(--brown);
+}
+  
+body{
+    background-color: var(--grey);
+}  
+ 
+.content{
+    background-color: #ffffff2f;
+    margin-top: 2.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+  
+.boxWhite{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    max-width: 43.5rem;
+    height: 43.5rem;
+    background-color: var(--white);
+    border-radius: 4.0rem;
+    box-shadow: -3px 3px 0px #E272A1, -6px 6px 0px #FF7143, -9px 9px 0px #FDCA28, -12px 12px 0px #FFEC3C, -15px 15px 0px #89C447, -18px 18px 0px #19B6FE;
+}
+  
+.benefits{
+    display: flex;
+    flex-direction: row;
+    margin: 3.2rem 3.1rem 0rem 3.1rem;
+    justify-content: space-between;
+    align-items:center;
+}
+  
+.benefits h1{
+    font-size: 3.6rem;
+    font-family: 'Source Serif Pro', serif;
+    line-height: 3.6rem;
+    font-weight: 600;
+    width: 18rem;
+    margin-right: 2.8rem;
+    text-align: center;
+}
+  
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+form input{
+    width: 37.9rem;
+    height: 3.8rem;
+    margin-top: 2.4rem;
+    padding: 1rem;
+    border-radius: 1.0rem;
+    border: #19B6FE solid 0.1rem;
+}
+  
+form input::placeholder{
+    font-family: 'Inconsolata', monospace;
+    padding-left: 1.0rem;
+    font-size: 1.4rem;
+    color:#07070775;
+}
+
+.child{
+    background-color: rgba(24, 224, 164, 0.151);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 20px 20px 0px;
+    width: 250px;
+    height: 300px;
+    font-size: 15px;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transition: 0.4s transform;
+}
+
+.child:hover{
+    animation-name: aniCard;
+    transform: scale(1.1);
+  
+}
+
+@keyframes aniCard {
+    0%   {background-color: rgba(255, 0, 0, 0.37);}
+    25%  {background-color: rgba(255, 255, 0, 0.212);}
+    50%  {background-color: rgba(0, 0, 255, 0.267);}
+    100% {background-color: rgba(0, 128, 0, 0.226);}
+}
+
+.img-child{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.legenda-child{
+    margin-top: 10px;
+}
+
+.data-child{
+    text-align: right;
+}
+
+p.legenda-child{
+    font-style: italic;
+}
+

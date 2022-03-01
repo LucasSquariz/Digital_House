@@ -1,0 +1,72 @@
+<!-- Crie uma nova página HTML e adicione via JavaScript os seguintes elementos:
+1. Crie um formulário
+2. Selecione o formulário e salve-o numa variável com querySelector.
+Itens a seguir serão inseridos dentro do formulário:
+3. Um título com o texto: “Login”.
+4. Um campo de input text com um placeholder: “Email”.
+5. Um campo de input password com um placeholder: “Senha”.
+6. Um botão submit com o texto “Enviar”.
+7. Um botão reset com o texto “Cancelar”.
+8. Insira a propriedade disabled no campo de Email.
+9. Insira um estilo da sua escolha, a sugestão seria o display flex com flex-direction
+column.
+10. Remova o atributo placeholder do email. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07 - Mesa de trabalho</title>
+</head>
+<body>
+    <script>
+        //Criando o form
+        let formulario = document.createElement("form");        
+        formulario.setAttribute('method',"post");
+        
+        //Criando titulo login
+        let h1 = document.createElement('h1');
+	    h1.textContent = 'Login';
+        
+
+        //Criando a label de email
+        let email = document.createElement("input");
+        email.setAttribute('placeholder',"email");
+        email.setAttribute('type',"text");
+        email.setAttribute('disabled',"disabled");
+
+        //Criando a label de senha
+        let senha = document.createElement("input");
+        senha.setAttribute('placeholder',"senha");
+        senha.setAttribute('type',"password");
+
+        //Criando a button de submit
+        let submit = document.createElement("input");
+        submit.setAttribute('type',"submit");
+        submit.setAttribute('value',"enviar");
+        
+        //Criando a button de cancelar
+        let cancelar = document.createElement("input");
+        cancelar.setAttribute('type',"reset");
+        cancelar.setAttribute('value',"resetar");
+
+        formulario.appendChild(h1);
+        formulario.appendChild(email);
+        formulario.appendChild(senha);
+        formulario.appendChild(submit);
+        formulario.appendChild(cancelar);
+
+        //Estilizando o formulario
+        formulario.style.display = 'flex';
+	    formulario.style.flexDirection = 'column';
+
+        document.querySelector("body").appendChild(formulario);
+
+        //Removendo atributo do email
+        email.removeAttribute('placeholder',"email");
+    </script>
+    
+</body>
+</html>

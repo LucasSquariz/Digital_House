@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  text-align: center;
+}
+#card {
+  img{
+    height: 50vh;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  :hover{
+    text-decoration: none;
+      padding: 3px;
+      border-radius: 2px;
+      font-weight: bold;
+      
+  }
+  
+} 
